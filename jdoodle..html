@@ -1,0 +1,184 @@
+<!DOCTYPE html><html><head><style>/* Feel free to change any of the styling below!*/
+body {
+    text-align: center;
+
+}
+
+img {
+    width: 350px;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+
+}
+
+p {
+    font-size: 35px;
+    font-weight: 800;
+}
+
+
+button {
+    height: 40px;
+}
+
+
+h1 {
+    font-size: 20px;
+    color: black;
+}
+
+/* When someone enters your game, you only want them to see the opening and the option buttons. The code below will use the display property to hide certain parts of the story. Remove the comments from the code below when you're ready for that step!*/
+
+/* 
+.story-opening{
+   display:none;
+}
+*/
+
+/* 
+.buttons{
+   display:none;
+}
+*/
+
+/* 
+.open-one-screen{
+   display:none;
+}
+*/
+
+/* 
+.open-two-screen{
+   display:none;
+}
+*/
+
+/* 
+.open-one-end{
+   display:none;
+}
+*/
+
+/* 
+.open-two-end{
+   display:none;
+}
+*/</style><script>
+ /* Declare variables below to save the different sections (divs) of your story*/
+
+
+
+
+
+
+
+
+
+/* When you're ready to make event handlers, uncomment the code below. Then fill in the blanks with the correct variables!
+INSERT_VARIABLE.onclick=function(){
+
+};
+
+INSERT_VARIABLE.onclick=function(){
+
+};
+
+
+INSERT_VARIABLE.onclick=function(){
+
+};
+
+*/
+</script></head><body><html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Kitten Escape</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <!-- Opening of the story -->
+  <div class="title">Kitten Escape from the Shelter! :3</div>
+  <div class="story-opening">
+    <img src="https://www.shutterstock.com/image-vector/cat-kitten-set-meow-text-260nw-2522324937.jpg" alt="Cute Kitten">
+    <h1>You are a group of kittens in a shelter, and today is the day. Will you attempt to escape and find freedom?</h1>
+  </div>
+
+  <!-- Buttons to choose options -->
+  <div class="buttons">
+    <button class="option-one">Yes, let's go!:3</button>
+    <button class="option-two">No, stay in the shelter :<</button>
+  </div>
+
+  <!-- If the user picks option one -->
+  <div class="option-one-screen" style="display: none;">
+    <h1>The kittens sneak out of their cages and head towards the exit. But they encounter a guard! Do they hide or run?</h1>
+    <img src="https://www.shutterstock.com/image-illustration/cat-nail-claw-scratch-glass-600w-2377091095.jpg" alt="Shelter Exit">
+    <button class="hide">Hide</button>
+    <button class="run">Run</button>
+  </div>
+
+  <!-- If the user picks option two -->
+  <div class="option-two-screen" style="display: none;">
+    <h1>The kittens decide to stay in the shelter. But the shelter is full! Some of them may be moved. Do you try to be adopted or just hide in your corner?</h1>
+    <img src="https://www.shutterstock.com/image-vector/cat-kitten-holding-big-empty-260nw-1906620157.jpg" alt="Kitten in Shelter">
+    <button class="adopt">Try to be adopted</button>
+    <button class="corner">Hide in the corner</button>
+  </div>
+
+  <!-- Ending if the user chose to run -->
+  <div class="option-one-end" style="display: none;">
+    <h1>The kittens bravely run past the guard! They find a small hole in the fence and slip through to freedom, finding a new home together. You escaped!</h1>
+    <img src="https://www.shutterstock.com/image-vector/cat-hugging-couple-family-heart-260nw-1875779062.jpg" alt="Kittens outside">
+  </div>
+
+  <!-- Ending if the user chose to hide -->
+  <div class="option-two-end" style="display: none;">
+    <h1>The kittens hide in the dark corner, avoiding being moved. They spend another day in the shelter, dreaming of a better life.</h1>
+    <img src="https://ih1.redbubble.net/image.4852445538.0717/flat,750x,075,f-pad,750x1000,f8f8f8.jpg" alt="Kittens hiding">
+  </div>
+
+  <script>
+    // JavaScript for handling button clicks and showing the correct story parts
+    document.querySelector('.option-one').addEventListener('click', function() {
+      document.querySelector('.story-opening').style.display = 'none';
+      document.querySelector('.option-one-screen').style.display = 'block';
+    });
+
+    document.querySelector('.option-two').addEventListener('click', function() {
+      document.querySelector('.story-opening').style.display = 'none';
+      document.querySelector('.option-two-screen').style.display = 'block';
+    });
+
+    document.querySelector('.hide').addEventListener('click', function() {
+      document.querySelector('.option-one-screen').style.display = 'none';
+      document.querySelector('.option-two-end').style.display = 'block';
+    });
+
+    document.querySelector('.run').addEventListener('click', function() {
+      document.querySelector('.option-one-screen').style.display = 'none';
+      document.querySelector('.option-one-end').style.display = 'block';
+    });
+
+    document.querySelector('.adopt').addEventListener('click', function() {
+      document.querySelector('.option-two-screen').style.display = 'none';
+      document.querySelector('.option-one-end').style.display = 'block';
+    });
+
+    document.querySelector('.corner').addEventListener('click', function() {
+      document.querySelector('.option-two-screen').style.display = 'none';
+      document.querySelector('.option-two-end').style.display = 'block';
+    });
+  </script>
+</body>
+</html>
+</body></html>
